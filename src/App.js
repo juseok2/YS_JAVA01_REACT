@@ -1,32 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <ul>
-        <li>강아지</li>
-        <li>고양이</li>
-        <li>토끼</li>
-        <li>거북이</li>
-      </ul>
-
-      <table border ='1px'>
-        <tr>
-          <td>이름</td>
-          <td>나이</td>
-        </tr>
-        <tr>
-          <td>홍길동</td>
-          <td>24</td>
-        </tr>
-        <tr>
-          <td>이순신</td>
-          <td>60</td>
-        </tr>
-      </table>
-    </div>
-  );
-}
-
-export default App;
+// 함수방식
+// 태그 하나로 감싸야 함
+export function App2(){
+    const divStyle = {
+      border: '1px solid blue'
+    }
+    return (
+      <div style = {divStyle}>
+        <p>안녕하세요</p>
+        <p>안녕</p>
+      </div>
+    );
+  }
