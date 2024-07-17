@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+        }
+        #wrap{
+            margin: 0 auto;
+        }
+        .addBox {
+            width: 500px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .addBox>button {
+            display: block;
+            width: 100px;
+            margin: 18px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .addBox input{
+            margin-left: 10px;
+        }
+
+        #statusBox {
+            width: 460px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+
+        #statusBox>p {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        #statusBox>p>button {
+            padding: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="addBox">
+            <div>
+                <p class="name">이름:<input type="text"></p>
+                <p class="age">나이:<input type="text"></p>
+                <p class="job">직업:<input type="text"></p>
+            </div>
+            <button id="addbtn">추가</button>
+        </div>
+        <div id="statusBox">
+        </div>
+    </div>
+    <script>
+        let addBtn = document.getElementById('addbtn');
+        addBtn.addEventListener('click', function () {
+            const divEle = document.querySelector('#statusBox');
+            const pEle = document.createElement('p');
+            const btnEle = document.createElement('button');
+            const name = document.querySelector('.name>input');
+            const age = document.querySelector('.age>input');
+            const job = document.querySelector('.job>input');
+            btnEle.textContent = '삭제';
+            pEle.textContent = name.value + ' (' + age.value + '세) ' + job.value;
+            name.value = null
+            age.value = null
+            job.value = null
+            pEle.appendChild(btnEle);
+            divEle.appendChild(pEle);
+            btnEle.addEventListener('click',() =>{
+                pEle.remove();
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+body{
+    background-color: #f0f0f0;
+}
+#wrap{
+    margin: 0 auto;
+}
+.addBox {
+    width: 500px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.addBox>button {
+    display: block;
+    width: 100px;
+    margin: 18px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.addBox input{
+    margin-left: 10px;
+}
+
+#statusBox {
+    width: 460px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+#statusBox>p {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#statusBox>p>button {
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+}
