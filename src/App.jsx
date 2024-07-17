@@ -14,8 +14,6 @@ export function App(){
     const aaa = () =>{
         // alert('강아지');
         // let num2 = num + 2;
-        setNum(num2);
-        alert(num2);
     }
     const redStyle ={
       color:'red',
@@ -28,7 +26,7 @@ export function App(){
     return (
       <div style = {divStyle}>
         {console.log('test')}
-        <p style={{color:'blue',fontSize:'32px'}}>안녕하세요{num}</p>
+        <p style={{color:'blue',fontSize:'32px'}}>안녕하세요</p>
         {/* <p style={redStyle}>반갑습니다. 잘 지내시죠?</p> */}
         <ColoredMessage color='orange' message = '잘 지내시죠?'/>
         <ColoredMessage color='red' message = 'How do you do?'/>
