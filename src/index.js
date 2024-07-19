@@ -1,6 +1,6 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {App} from './App003';
-import { Login } from './comonents/Login';
+import {App} from './calculator/App';
 
 // 람다식
 // const App = () =>{
@@ -27,8 +27,6 @@ import { Login } from './comonents/Login';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  {console.log('render')}
     <App/>
-    {/* <Login/> */}
   </>
 );
